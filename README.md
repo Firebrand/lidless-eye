@@ -32,6 +32,7 @@ $ lidless-eye -f "mywatchers.yml"
 
 ### Sample .yml file
 
+```
 new test/**/*.js:
   - dir
   - echo 'You created a js file'
@@ -39,6 +40,7 @@ edit test/**/*.txt:
   - php -v
   - echo 'You just edited $FILE'
   - echo %random%
+```
 
 ## License
 

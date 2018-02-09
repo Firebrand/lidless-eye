@@ -1,7 +1,7 @@
 {
-  "name": "The Lidless Eye",
-  "version": "0.1.0",
-  "description": "Run custom scripts whenever specified file changes are made",
+  "name": "lidless-eye",
+  "version": "0.1.2",
+  "description": "Monitor user-specified files/folders for changes on specific file extensions and run relevant shell commands",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
