@@ -19,7 +19,6 @@
   "dependencies": {
     "chokidar": "^2.0.1",
     "commander": "^2.14.1",
-    "node-cmd": "^3.0.0",
     "yamljs": "^0.3.0"
   }
 }
