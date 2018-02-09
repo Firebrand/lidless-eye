@@ -2,12 +2,12 @@ const { exec } = require('child_process');
 
 let _extensionTasks = {};
 
-const setExtensionTasks = function(extensionTasksVar) {
+const setExtensionTasks = extensionTasksVar => {
     _extensionTasks = extensionTasksVar;
 }
 
 
-const handleChange = function(eventType, path) {
+const handleChange = (eventType, path) => {
 
     extension = getExtension(path);
     cmdArray = _extensionTasks[`${eventType}:${extension}`];
@@ -30,7 +30,7 @@ const handleChange = function(eventType, path) {
 }
 
 
-const getExtension = function(filePath) {
+const getExtension = filePath => {
     let splitPath = filePath.split('.');
     let splitPathLength = splitPath.length;
     return splitPath[splitPathLength-1];

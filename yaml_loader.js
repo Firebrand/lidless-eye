@@ -7,12 +7,16 @@ let extensionTasks = {};
 let _settings = {};
 
 
-let readYmlFile = function (file) {
+let readYmlFile = file => {
 
     try {
         _settings = yaml.load(file);
     } catch (err) {
-        console.log(`There was a problem reading: ${file}`);
+        if (file.length<1) {
+            console.log(`You need to specify a .yml file with your settings. See documentation.`);    
+        } else {
+            console.log(`There was a problem reading: ${file}`);
+        }
         process.exit();
     }
 

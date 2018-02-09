@@ -2,10 +2,9 @@ const program = require('commander');
 
 let filePath = '';
 
-
 program
-  .version('1.0.0')
-  .description('Run custom scripts whenever specified file changes are made');
+  .version('0.1.0')
+  .description('Monitor user-specified files/folders for changes on specific file extensions and run relevant shell commands');
 
 program
   .option('-f, --file', 'The .yml file containing what to monitor and how to respond to changes')

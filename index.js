@@ -24,4 +24,4 @@ watcher
 
 
 
-console.log('\x1b[32m', 'The Beholder is ever watching...'); 
+console.log('\x1b[32m', 'The Lidless Eye is ever watching...'); 
