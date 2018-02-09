@@ -1,0 +1,5 @@
+test/**/*.js:
+  - cls
+  - echo 'Wow'
+test/**/*.txt:
+  - echo 'Not good'
