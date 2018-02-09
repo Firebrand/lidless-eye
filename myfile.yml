@@ -1,7 +1,0 @@
-new test/**/*.js:
-  - dir
-  - echo 'You created a js file'
-edit test/**/*.txt:
-  - php -v
-  - echo 'You just edited $FILE'
-  - echo %random% %random% %random% %random% %random% %random% %random% %random% %random% %random% %random% %random% %random% %random%
