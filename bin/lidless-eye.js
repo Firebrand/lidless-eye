@@ -2,7 +2,7 @@
 'use strict';
 const program = require('commander');
 const lidlessEye = require('../lib/');
-const packgjson = require('../packgjson.json');
+const packgjson = require('../package.json');
 
 
 program
