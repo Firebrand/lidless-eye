@@ -1,6 +1,6 @@
 {
   "name": "lidless-eye",
-  "version": "0.1.21",
+  "version": "0.1.22",
   "description": "Monitor user-specified files/folders for changes on specific file extensions and run relevant shell commands",
   "main": "index.js",
   "scripts": {
