@@ -2,7 +2,7 @@
 
 # lidless-eye
 
-Monitor user-specified files/folders for changes on specific file extensions and run relevant shell commands
+Lidless Eye will monitor user-specified folders/files/extensions for changes and then asynchronously execute custom shell commands whenever changes occur.
 
 ## Installation
 
