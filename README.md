@@ -35,19 +35,23 @@ $ lidless -f "mywatchers.yml"
 ### Sample .yml file
 
 ```
-edit ./docroot/themes/custom/sch_retail/templates/**/*.twig:
+edit ./docroot/themes/custom/retail/templates/**/*.twig:
   - drush cr
   - echo Caches have been refreshed!
 
-edit ./docroot/themes/custom/sch_retail/sass/**/*.scss:
+edit ./docroot/themes/custom/retail/sass/**/*.scss:
   - /var/www/drupal_test/vendor/bin/blt frontend:build
 
-add ./docroot/themes/custom/sch_retail/js/**/*.js:
-  - git add $FILE  
+add ./docroot/themes/custom/retail/**/*:
+  - git add $FILE                            # The keyword $FILE gets replaced by the file being altered
   - echo $FILE was added to staging area
 
-edit ./docroot/themes/custom/sch_retail/js/**/*.js:
+edit ./docroot/themes/custom/retail/**/*:
   - git reset HEAD $FILE & git add $FILE     # Here we are using the & operator to run one command after the other, synchronously
+
+delete ./docroot/themes/custom/retail/**/*:
+  - echo $FILE was deleted >> deleted_files_log.txt
+
 ```
 
 ## License

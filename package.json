@@ -1,7 +1,7 @@
 {
   "name": "lidless-eye",
   "version": "0.1.22",
-  "description": "Monitor user-specified files/folders for changes on specific file extensions and run relevant shell commands",
+  "description": "Lidless Eye will monitor user-specified folders/files/extensions for changes and then perform custom shell commands whenever changes occur.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -22,3 +22,6 @@
     "bin"
   ]
 }
+
+
+ 
