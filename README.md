@@ -1,4 +1,4 @@
-# The Lidless Eye
+# lidless-eye
 
 Monitor user-specified files/folders for changes on specific file extensions and run relevant shell commands
 
@@ -33,13 +33,16 @@ $ lidless-eye -f "mywatchers.yml"
 ### Sample .yml file
 
 ```
-new test/**/*.js:
-  - dir
-  - echo 'You created a js file'
-edit test/**/*.txt:
-  - php -v
-  - echo 'You just edited $FILE'
-  - echo %random%
+edit ./docroot/themes/custom/sch_retail/templates/**/*.twig:
+  - drush cr
+edit ./docroot/themes/custom/sch_retail/sass/**/*.scss:
+  - /var/www/drupal_test/vendor/bin/blt frontend:build
+edit ./docroot/themes/custom/sch_retail/js/**/*.js:
+  - git reset HEAD $FILE
+  - git add $FILE
+add ./docroot/themes/custom/sch_retail/js/**/*.js:
+  - git add $FILE
+  
 ```
 
 ## License
