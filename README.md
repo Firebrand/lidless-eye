@@ -1,3 +1,5 @@
+![nodemon logo](https://user-images.githubusercontent.com/13700/35731649-652807e8-080e-11e8-88fd-1b2f6d553b2d.png)
+
 # lidless-eye
 
 Monitor user-specified files/folders for changes on specific file extensions and run relevant shell commands
@@ -11,7 +13,7 @@ npm install --global lidless-eye
 ## Usage
 
 ```
-Usage: lidless-eye -f <glob>
+Usage: lidless -f <path to yml file>
 
 Monitor user-specified files/folders for changes on specific file extensions and run relevant shell commands
 
@@ -24,10 +26,10 @@ Options:
 
 ## Examples
 
-### Watching one or more glob
+### Running the lidless eye and passing it a yml settings file
 
 ```
-$ lidless-eye -f "mywatchers.yml"
+$ lidless -f "mywatchers.yml"
 ```
 
 ### Sample .yml file
@@ -35,14 +37,17 @@ $ lidless-eye -f "mywatchers.yml"
 ```
 edit ./docroot/themes/custom/sch_retail/templates/**/*.twig:
   - drush cr
+  - echo Caches have been refreshed!
+
 edit ./docroot/themes/custom/sch_retail/sass/**/*.scss:
   - /var/www/drupal_test/vendor/bin/blt frontend:build
-edit ./docroot/themes/custom/sch_retail/js/**/*.js:
-  - git reset HEAD $FILE
-  - git add $FILE
+
 add ./docroot/themes/custom/sch_retail/js/**/*.js:
-  - git add $FILE
-  
+  - git add $FILE  
+  - echo $FILE was added to staging area
+
+edit ./docroot/themes/custom/sch_retail/js/**/*.js:
+  - git reset HEAD $FILE & git add $FILE     # Here we are using the & operator to run one command after the other, synchronously
 ```
 
 ## License

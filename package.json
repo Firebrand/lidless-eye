@@ -15,7 +15,7 @@
   },
   "preferGlobal": true,
   "bin": {
-    "lidless-eye": "./bin/lidless-eye.js"
+    "lidless": "./bin/lidless-eye.js"
   },
   "files": [
     "lib",
