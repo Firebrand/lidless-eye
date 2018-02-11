@@ -6,9 +6,11 @@ const packgjson = require('../package.json');
 
 
 program
-  .command('lidless')
+  .alias('lidless')
   .version(packgjson.version)
   .description(packgjson.description)
   .option('-f, --file', 'The .yml file containing what to monitor and how to respond to changes')
-  .action(pathToFile => lidlessEye(pathToFile) )
-  .parse(process.argv); 
+  .action(file=>lidlessEye(file));
+
+program.parse(process.argv)
+//lidlessEye(process.argv[3]);
