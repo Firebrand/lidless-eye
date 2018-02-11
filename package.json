@@ -1,6 +1,6 @@
 {
   "name": "lidless-eye",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "Lidless Eye will monitor user-specified folders/files/extensions for changes and then execute custom shell commands whenever changes occur.",
   "main": "./lib",
   "scripts": {
