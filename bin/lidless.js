@@ -8,8 +8,8 @@ const packgjson = require('../package.json');
 program
 .version(packgjson.version)
 .description(packgjson.description)
-.option('-c, --config', 'Path to the .yml config file')
-.action(path_to_yml_config_file=>lidlessEye(path_to_yml_config_file));
+.command('eye <path_to_yml_config_file>')
+.action(path_to_yml_config_file=>lidlessEye(path_to_yml_config_file.replace(/['"]+/g, '')));
 
 
 program.parse(process.argv);

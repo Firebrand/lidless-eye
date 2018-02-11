@@ -13,13 +13,16 @@ npm install --global lidless-eye
 ## Usage
 
 ```
-Usage: lidless -c <path to yml file>
+Usage: lidless eye <path_to_yml_config_file>
 
 Monitor user-specified files/folders for changes on specific file extensions and run relevant shell commands
 
+Commands:
+
+  eye <path_to_yml_config_file>
+
 Options:
 
-  -c, --config          path to the .yml file containing what to monitor and how to respond to changes
   -h, --help          output usage information
   -V, --version       output version number
 ```
@@ -29,7 +32,7 @@ Options:
 ### Running the lidless eye and passing it a yml settings file
 
 ```
-$ lidless -c "mywatchers.yml"
+$ lidless eye "mywatchers.yml"
 ```
 
 ### Sample .yml file
