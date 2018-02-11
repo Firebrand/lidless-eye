@@ -2,7 +2,7 @@
 
 # lidless-eye
 
-Lidless Eye will monitor user-specified folders/files/extensions for changes and then asynchronously execute custom shell commands whenever changes occur.
+Lidless Eye will monitor user-specified folders/files/extensions for changes and then execute custom shell commands whenever changes occur.
 
 ## Installation
 
@@ -50,13 +50,15 @@ add ./docroot/themes/custom/retail/**/*:
   - echo $FILE was added to staging area
 
 edit ./docroot/themes/custom/retail/**/*:
-  - git reset HEAD $FILE & git add $FILE     # Here we are using the & operator to run one command after the other, synchronously
+  - git reset HEAD $FILE
+  - git add $FILE     
 
 delete ./docroot/themes/custom/retail/**/*:
   - echo $FILE was deleted >> deleted_files_log.txt
 
 edit ./commitlog  
-  - git commit -m '$LASTLINE' & git push origin HEAD   # The keyword $LASTLINE contains the value of the last line of the file being altered
+  - git commit -m "$LASTLINE"
+  - git push origin HEAD   # The keyword $LASTLINE contains the value of the last line of the file being altered
 ```
 
 ## License
