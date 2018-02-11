@@ -46,7 +46,7 @@ edit ./docroot/themes/custom/retail/sass/**/*.scss:
   - /var/www/drupal_test/vendor/bin/blt frontend:build
 
 add ./docroot/themes/custom/retail/**/*:
-  - git add $FILE                            # The keyword $FILE gets replaced by the file being altered
+  - git add $FILE                            # The keyword $FILE contains the relpath/name of the file being altered
   - echo $FILE was added to staging area
 
 edit ./docroot/themes/custom/retail/**/*:
@@ -55,6 +55,8 @@ edit ./docroot/themes/custom/retail/**/*:
 delete ./docroot/themes/custom/retail/**/*:
   - echo $FILE was deleted >> deleted_files_log.txt
 
+edit ./commitlog  
+  - git commit -m '$LASTLINE' & git push origin HEAD   # The keyword $LASTLINE contains the value of the last line of the file being altered
 ```
 
 ## License
