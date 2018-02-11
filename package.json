@@ -1,10 +1,10 @@
 {
   "name": "lidless-eye",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "Lidless Eye will monitor user-specified folders/files/extensions for changes and then execute custom shell commands whenever changes occur.",
-  "main": "index.js",
+  "main": "./lib",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "npm run lint && npm run spec"
   },
   "author": "Alexios Tsirozidis",
   "license": "ISC",
@@ -15,7 +15,7 @@
   },
   "preferGlobal": true,
   "bin": {
-    "lidless": "./bin/lidless-eye.js"
+    "lidless": "./bin/lidless.js"
   },
   "files": [
     "lib",
