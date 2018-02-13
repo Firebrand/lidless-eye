@@ -38,27 +38,32 @@ $ lidless eye "mywatchers.yml"
 ### Sample .yml file
 
 ```
-edit ./docroot/themes/custom/retail/templates/**/*.twig:
-  - drush cr
-  - echo Caches have been refreshed!
+edit ./src/**/*.js:
+  - npx babel $PATH/$NAME --out-file ./lib/$NAME
 
-edit ./docroot/themes/custom/retail/sass/**/*.scss:
-  - /var/www/drupal_test/vendor/bin/blt frontend:build
+delete ./**/*:
+  - echo $PATH/$NAME was deleted >> deleted_files_log.txt
 
-add ./docroot/themes/custom/retail/**/*:
-  - git add $FILE                            # The keyword $FILE contains the relpath/name of the file being altered
-  - echo $FILE was added to staging area
+add ./src/**/*:
+  - git add $PATH/$NAME                           
+  - echo $PATH/$NAME was added to staging area!
 
-edit ./docroot/themes/custom/retail/**/*:
-  - git reset HEAD $FILE
-  - git add $FILE     
+edit ./src/**/*:
+  - git reset HEAD $PATH/$NAME
+  - git add $PATH/$NAME    
 
-delete ./docroot/themes/custom/retail/**/*:
-  - echo $FILE was deleted >> deleted_files_log.txt
-
-edit ./commitlog  
+edit ./commitlog:
   - git commit -m "$LASTLINE"
-  - git push origin HEAD   # The keyword $LASTLINE contains the value of the last line of the file being altered
+  - git push origin HEAD
+```
+
+### Notes
+
+```
+Three variables are available to use in your yml settings file:
+$PATH - This is the path of the file that has just been altered (ex. "user/stuff/memos/")
+$NAME - This is the name of the file that has just been altered (ex. "to-do-list.txt")
+$LASTLINE - This is the value of the last line of the file that has just been altered (ex. "3.Re-read The Name Of The Wind" )
 ```
 
 ## License

@@ -1,10 +1,22 @@
 {
   "name": "lidless-eye",
-  "version": "1.0.4",
+  "version": "1.0.6",
   "description": "Lidless Eye will monitor user-specified folders/files/extensions for changes and then execute custom shell commands whenever changes occur.",
   "main": "./lib",
   "scripts": {
     "test": "npm run lint && npm run spec"
+  },
+  "keywords": [
+    "monitor",
+    "changes",
+    "cli",
+    "commands",
+    "automate",
+    "shell"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Firebrand/lidless-eye"
   },
   "author": "Alexios Tsirozidis",
   "license": "ISC",
